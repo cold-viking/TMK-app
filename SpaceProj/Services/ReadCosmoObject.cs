@@ -9,13 +9,13 @@ public static class ReadCosmoObject
     {
         string jsonFromFile = File.ReadAllText(fileName);
 
-        T? restoredStar = JsonSerializer.Deserialize<T>(jsonFromFile);
+        T? restoredObject = JsonSerializer.Deserialize<T>(jsonFromFile);
 
-        if (restoredStar == null)
+        if (restoredObject == null)
         {
             throw new InvalidOperationException("ERROR: Object was not deserialized from json");
         }
 
-        return restoredStar;
+        return restoredObject;
     }
 }
