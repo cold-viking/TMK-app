@@ -1,6 +1,6 @@
 ﻿namespace SpaceProj.Entity;
 
-public abstract class CosmoObject
+public abstract class CosmoObject : ICosmoObject
 {
     public Guid Id { get; set; } = Guid.NewGuid();
 

@@ -4,9 +4,9 @@ namespace SpaceProj.Services;
 
 public static class CosmoObjectInitializer
 {
-    public static List<CosmoObject> Create()
+    public static List<ICosmoObject> Create()
     {
-        CosmoObject star = new Star(
+        ICosmoObject star = new Star(
             "Sun",
             9999,
             220,
@@ -15,7 +15,7 @@ public static class CosmoObjectInitializer
             "Yellow"
         );
 
-        CosmoObject planet = new Planet(
+        ICosmoObject planet = new Planet(
             "Earth",
             5972,
             29.78,
@@ -25,7 +25,7 @@ public static class CosmoObjectInitializer
             6371
         );
 
-        CosmoObject blackHole = new BlackHole(
+        ICosmoObject blackHole = new BlackHole(
             "Sagittarius A*",
             4300000,
             0,
@@ -34,7 +34,7 @@ public static class CosmoObjectInitializer
             999999
         );
 
-        CosmoObject asteroid = new Asteroid(
+        ICosmoObject asteroid = new Asteroid(
             "Ceres",
             939,
             17.9,
@@ -42,7 +42,7 @@ public static class CosmoObjectInitializer
             939.4,
             "Rock and ice"
         );
-        List<CosmoObject> cosmoObjects = new List<CosmoObject>();
+        List<ICosmoObject> cosmoObjects = new List<ICosmoObject>();
         
         cosmoObjects.Add(star);
         cosmoObjects.Add(planet);
@@ -56,8 +56,8 @@ public static class CosmoObjectInitializer
     {
         if (!File.Exists(fileName))
         {
-           List<CosmoObject> cosmoObjects = Create();
-           WriteCosmoObject.Save(cosmoObjects, fileName);
+            List<ICosmoObject> cosmoObjects = Create();
+            WriteCosmoObject.Save(cosmoObjects, fileName);
         }
     }
 }

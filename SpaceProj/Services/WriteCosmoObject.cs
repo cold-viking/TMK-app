@@ -4,9 +4,14 @@ namespace SpaceProj.Services;
 
 public static class WriteCosmoObject
 {
-    public static void Save<T>(T objectToWrite,  string fileName)
+    private static readonly JsonSerializerOptions Options = new()
     {
-        string json = JsonSerializer.Serialize(objectToWrite);
+        WriteIndented = true
+    };
+
+    public static void Save<T>(T objectToWrite, string fileName)
+    {
+        string json = JsonSerializer.Serialize(objectToWrite, Options);
 
         File.WriteAllText(fileName, json);
     }
