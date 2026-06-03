@@ -1,6 +1,6 @@
 ﻿namespace SpaceProj.Entities;
 
-public abstract class CosmoObject : ICosmoObject
+public abstract class CosmoObject : ITypeDiscriminator
 {
     public Guid Id { get; set; } = Guid.NewGuid();
 
@@ -11,6 +11,8 @@ public abstract class CosmoObject : ICosmoObject
     public double SpeedKmPerSecond { get; set; }
 
     public double AgeInBillionYears { get; set; }
+    
+    public abstract string Type { get; }
 
     protected CosmoObject(
         string name,

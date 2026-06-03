@@ -2,6 +2,7 @@
 
 public class BlackHole : CosmoObject
 {
+    public override string Type => "blackHole";
     public double EventHorizonRadiusInKm { get; set; }
 
     public double GravityPower { get; set; }

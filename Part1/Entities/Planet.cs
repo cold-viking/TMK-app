@@ -2,6 +2,9 @@
 
 public class Planet : CosmoObject
 {
+    
+    public override string Type => "planet";
+    
     public bool HasLife { get; set; }
 
     public string Atmosphere { get; set; }
