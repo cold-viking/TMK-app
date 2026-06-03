@@ -12,8 +12,11 @@ public class Program
 
         CosmoObjectInitializer.InitializeFile(fileName);
 
-        Console.WriteLine("Initialization completed");
+        List<CosmoObject> objects = ReadCosmoObject.Load<List<CosmoObject>>(fileName);
 
-        Console.WriteLine(Path.GetFullPath(fileName));
+        foreach (CosmoObject cosmoObject in objects)
+        {
+            Console.WriteLine($"{cosmoObject.Name} | {cosmoObject.Type} | {cosmoObject.GetType().Name}");
+        }
     }
 }

@@ -6,7 +6,11 @@ public static class WriteCosmoObject
 {
     private static readonly JsonSerializerOptions Options = new()
     {
-        WriteIndented = true
+        WriteIndented = true,
+        Converters =
+        {
+            new CosmoObjectJsonConverter()
+        }
     };
 
     public static void Save<T>(T objectToWrite, string fileName)
