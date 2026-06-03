@@ -2,7 +2,7 @@
 
 namespace SpaceProj.Services;
 
-public static class ReadCosmoObject
+public static class Reader
 {
     private static readonly JsonSerializerOptions Options = new()
     {

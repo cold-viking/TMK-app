@@ -2,7 +2,7 @@
 
 namespace SpaceProj.Services;
 
-public static class WriteCosmoObject
+public static class Writer
 {
     private static readonly JsonSerializerOptions Options = new()
     {

@@ -12,7 +12,7 @@ public class Program
 
         CosmoObjectInitializer.InitializeFile(fileName);
 
-        List<CosmoObject> objects = ReadCosmoObject.Load<List<CosmoObject>>(fileName);
+        List<CosmoObject> objects = Reader.Load<List<CosmoObject>>(fileName);
 
         foreach (CosmoObject cosmoObject in objects)
         {

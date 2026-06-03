@@ -2,12 +2,6 @@
 
 public class Star : CosmoObject
 {
-    
-    public override string Type => "star";
-    public double TemperatureInKelvin { get; set; }
-
-    public string Color { get; set; }
-
     public Star(
         string name,
         double massInTons,
@@ -20,6 +14,13 @@ public class Star : CosmoObject
         TemperatureInKelvin = temperatureInKelvin;
         Color = color;
     }
+    
+    public override string Type => "star";
+    public double TemperatureInKelvin { get; set; }
+
+    public string Color { get; set; }
+
+
 
     public override string GetInfo()
     {

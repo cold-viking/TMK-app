@@ -23,13 +23,13 @@ public static class JsonSerialization
         );
             
         string fileName = "cosmo.json";
-        WriteCosmoObject.Save(star, fileName);
+        Writer.Save(star, fileName);
 
-        Star restoredObject = ReadCosmoObject.Load<Star>(fileName);
+        Star restoredObject = Reader.Load<Star>(fileName);
         Console.WriteLine(restoredObject.GetInfo());
         
-        WriteCosmoObject.Save(planet, fileName);
-        Planet planetObject = ReadCosmoObject.Load<Planet>(fileName);
+        Writer.Save(planet, fileName);
+        Planet planetObject = Reader.Load<Planet>(fileName);
         Console.WriteLine(planetObject.GetInfo());
     }
 }

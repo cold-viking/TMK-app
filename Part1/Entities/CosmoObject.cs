@@ -2,18 +2,7 @@
 
 public abstract class CosmoObject : ITypeDiscriminator
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
-
-    public string Name { get; set; }
-
-    public double MassInTons { get; set; }
-
-    public double SpeedKmPerSecond { get; set; }
-
-    public double AgeInBillionYears { get; set; }
     
-    public abstract string Type { get; }
-
     protected CosmoObject(
         string name,
         double massInTons,
@@ -26,6 +15,20 @@ public abstract class CosmoObject : ITypeDiscriminator
         SpeedKmPerSecond = speedKmPerSecond;
         AgeInBillionYears = ageInBillionYears;
     }
+    
+    public Guid Id { get; set; } = Guid.NewGuid();
+
+    public string Name { get; set; }
+
+    public double MassInTons { get; set; }
+
+    public double SpeedKmPerSecond { get; set; }
+
+    public double AgeInBillionYears { get; set; }
+    
+    public abstract string Type { get; }
+
+
 
     public abstract string GetInfo();
 }

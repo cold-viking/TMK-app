@@ -2,11 +2,7 @@
 
 public class Asteroid : CosmoObject
 {
-    public override string Type => "asteroid";
-    public double DiameterInKm { get; set; }
-
-    public string Material { get; set; }
-
+    
     public Asteroid(
         string name,
         double massInTons,
@@ -19,6 +15,13 @@ public class Asteroid : CosmoObject
         DiameterInKm = diameterInKm;
         Material = material;
     }
+    
+    public override string Type => "asteroid";
+    public double DiameterInKm { get; set; }
+
+    public string Material { get; set; }
+
+
 
     public override string GetInfo()
     {

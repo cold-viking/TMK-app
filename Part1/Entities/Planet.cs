@@ -2,15 +2,6 @@
 
 public class Planet : CosmoObject
 {
-    
-    public override string Type => "planet";
-    
-    public bool HasLife { get; set; }
-
-    public string Atmosphere { get; set; }
-
-    public double RadiusInKm { get; set; }
-
     public Planet(
         string name,
         double massInTons,
@@ -25,6 +16,16 @@ public class Planet : CosmoObject
         Atmosphere = atmosphere;
         RadiusInKm = radiusInKm;
     }
+    
+    public override string Type => "planet";
+    
+    public bool HasLife { get; set; }
+
+    public string Atmosphere { get; set; }
+
+    public double RadiusInKm { get; set; }
+
+
 
     public override string GetInfo()
     {

@@ -57,7 +57,7 @@ public static class CosmoObjectInitializer
         if (!File.Exists(fileName))
         {
             List<CosmoObject> cosmoObjects = Create();
-            WriteCosmoObject.Save(cosmoObjects, fileName);
+            Writer.Save(cosmoObjects, fileName);
         }
     }
 }
