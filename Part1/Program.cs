@@ -1,7 +1,8 @@
 ﻿using SpaceProj.Services;
 using SpaceProj.Entities;
+using SpaceProj.Services;
+using SpaceProj.Services.Initializers;
 
-namespace SpaceProj;
 
 public class Program
 {
@@ -10,13 +11,12 @@ public class Program
 
         string fileName = "cosmoObjects.json";
 
-        CosmoObjectInitializer.InitializeFile(fileName);
+        DefaultInitializer initializer = new DefaultInitializer();
 
-        List<CosmoObject> objects = Reader.Load<List<CosmoObject>>(fileName);
+        List<CosmoObject> defaultObjects = initializer.Create();
 
-        foreach (CosmoObject cosmoObject in objects)
-        {
-            Console.WriteLine($"{cosmoObject.Name} | {cosmoObject.Type} | {cosmoObject.GetType().Name}");
-        }
+        FileManager.CreateIfNotExists(fileName, defaultObjects);
+
+        List<CosmoObject> cosmoObjects = Reader.Load<List<CosmoObject>>(fileName);
     }
 }
