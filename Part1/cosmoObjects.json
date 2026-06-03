@@ -1,0 +1,43 @@
+[
+  {
+    "objectType": "star",
+    "TemperatureInKelvin": 5800,
+    "Color": "Yellow",
+    "Id": "eee7bb76-d9e0-43ac-a367-a6cf3c205cae",
+    "Name": "Sun",
+    "MassInTons": 9999,
+    "SpeedKmPerSecond": 220,
+    "AgeInBillionYears": 4.5
+  },
+  {
+    "objectType": "planet",
+    "HasLife": true,
+    "Atmosphere": "Nitrogen-oxygen",
+    "RadiusInKm": 6371,
+    "Id": "383d973d-cad9-49fc-8ba1-b9f944ef05cb",
+    "Name": "Earth",
+    "MassInTons": 5972,
+    "SpeedKmPerSecond": 29.78,
+    "AgeInBillionYears": 4.5
+  },
+  {
+    "objectType": "blackHole",
+    "EventHorizonRadiusInKm": 12000000,
+    "GravityPower": 999999,
+    "Id": "584c6879-ca1c-4131-96e8-1f4f17695c08",
+    "Name": "Sagittarius A*",
+    "MassInTons": 4300000,
+    "SpeedKmPerSecond": 0,
+    "AgeInBillionYears": 13.6
+  },
+  {
+    "objectType": "asteroid",
+    "DiameterInKm": 939.4,
+    "Material": "Rock and ice",
+    "Id": "84159627-2582-4342-9507-f26db021e1f8",
+    "Name": "Ceres",
+    "MassInTons": 939,
+    "SpeedKmPerSecond": 17.9,
+    "AgeInBillionYears": 4.5
+  }
+]
